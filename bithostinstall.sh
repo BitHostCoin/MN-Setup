@@ -6,7 +6,7 @@ CONFIGFOLDER='/root/.bithost'
 COIN_DAEMON='bithostd'
 COIN_CLI='bithost-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://github.com/BitHostCoin/BitHost/files/2498090/BitHost_Daemon_.Ubuntu_16.04.tar.gz'
+COIN_TGZ='https://github.com/BitHostCoin/BitHost/files/2768285/BitHost-.Daemon_Ubuntu_16.04.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='bithost'
 COIN_PORT=29918
@@ -47,7 +47,7 @@ function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
   cd $TMP_FOLDER >/dev/null 2>&1
   wget -q $COIN_TGZ
-  tar xzvf BitHost_Daemon_.Ubuntu_16.04.tar.gz
+  tar xzvf BitHost-.Daemon_Ubuntu_16.04.tar.gz
   cd rev >/dev/null 2>&1
   chmod +x $COIN_DAEMON $COIN_CLI
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
